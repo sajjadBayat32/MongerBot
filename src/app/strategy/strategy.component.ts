@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./strategy.component.css']
 })
 export class StrategyComponent implements OnInit {
+  id = 125;
 
   constructor() { }
 
