@@ -5,20 +5,30 @@ import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import {RouterModule} from '@angular/router';
 import {NgZorroModule} from './_modules/ng-zorro.module';
-import {StrategyComponent} from './strategy/strategy.component';
-import { EditStrategyComponent } from './edit-strategy/edit-strategy.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {FormlyModule} from '@ngx-formly/core';
+import {FormlyNgZorroAntdModule} from '@ngx-formly/ng-zorro-antd';
+import {StrategyListComponent} from './strategies/strategy-list/strategy-list.component';
+import {EditStrategyComponent} from './strategies/edit-strategy/edit-strategy.component';
+import {HttpClientModule} from "@angular/common/http";
+import {StrategyComponent} from "./strategies/strategy/strategy.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    StrategyComponent,
-    EditStrategyComponent
+    StrategyListComponent,
+    EditStrategyComponent,
+    StrategyComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    NgZorroModule
+    HttpClientModule,
+    NgZorroModule,
+    ReactiveFormsModule,
+    FormlyModule.forRoot(),
+    FormlyNgZorroAntdModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,78 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="page-title-box">
+      <a routerLink="/" class="btn btn-default pull-right" title="Documentation">
+        <i class="fa fa-question-circle m-r-5"></i>
+        <span class="hidden-xs">Help</span>
+      </a>
+      <a routerLink="/strategies/new" routerLinkActive="active" class="btn btn-success pull-right m-r-5">
+        <i class="fas fa-pencil-alt m-r-5"></i>
+        New strategy
+      </a>
+      <h4 class="page-title" id="page_title_h4">Strategies</h4>
+    </div>
+  </div>
+</div>
+
+
+<div class="system-message-container">
+
+</div>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <nz-tabset nzType="card">
+      <nz-tab nzTitle="My Strategies">
+        <div class="tab-content">
+          <div class="tab-pane active">
+            <div class="row">
+                <div class="col-md-12">
+                  <ng-container *ngIf="strategies.length === 0">
+                    <div class="row port m-t-15">
+                      <div class="categoryMyStrategiesContainer">
+                        <div class="col-md-12 m-t-30 m-b-30">
+                            <h3 class="title m-b-15">You do not have any strategies.</h3>
+                            <a routerLink="/strategies/new" routerLinkActive="active" class="btn btn-primary m-r-10">Create a strategy now</a>
+                            <a class="btn btn-link">Read documentation</a>
+                        </div>
+                      </div>
+                    </div>
+                  </ng-container>
+                  <ng-container *ngIf="strategies.length > 0">
+                    <div class="card-box">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="categoryMyStrategiesSort portfolioFilter">
+                            <label class="m-r-5">Sort by:</label>
+                            <div class="current">Name</div>
+                            <div>Last modified</div>
+                            <div>Creation date</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="col-md-12">
+                          <div class="port m-t-15">
+                            <div class="categoryMyStrategiesContainer">
+                              <div class="row">
+                                <div class="col-md-3 col-sm-4 col-xs-12 text-center app_box m-b-10" *ngFor="let strategy of strategies">
+                                  <app-strategy [strategy]="strategy"></app-strategy>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </ng-container>
+                </div>
+            </div>
+          </div>
+        </div>
+      </nz-tab>
+    </nz-tabset>
+  </div>
+</div>

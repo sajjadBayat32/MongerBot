@@ -15,7 +15,13 @@
     <div class="m-t-20">
       <div class="card-box">
         <div>
-
+          <form nz-form [formGroup]="form" [nzLayout]="'vertical'" (ngSubmit)="submit(model)">
+            <formly-form [form]="form" [fields]="fields" [model]="model"></formly-form>
+            <button type="submit" class="btn btn-success waves-effect waves-light">
+              <i class="fa fa-save m-r-5"></i>
+              Save
+            </button>
+          </form>
         </div>
       </div>
     </div>

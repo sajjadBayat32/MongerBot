@@ -1,0 +1,17 @@
+.card-box .image-container {
+  margin: -20px -20px 10px -20px;
+}
+
+.card-box .image-container img {
+  width: 100%;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-group {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 10px;
+}

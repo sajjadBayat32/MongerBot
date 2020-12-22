@@ -1,0 +1,7 @@
+.categoryMyStrategiesContainer {
+  position: relative;
+}
+
+.categoryMyStrategiesContainer .card-box {
+  border: 1px solid rgb(231, 231, 231);
+}

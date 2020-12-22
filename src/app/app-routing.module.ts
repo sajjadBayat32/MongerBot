@@ -1,12 +1,12 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {StrategyComponent} from './strategy/strategy.component';
-import {EditStrategyComponent} from './edit-strategy/edit-strategy.component';
+import {StrategyListComponent} from './strategies/strategy-list/strategy-list.component';
+import {EditStrategyComponent} from './strategies/edit-strategy/edit-strategy.component';
 
 const routes: Routes = [
   {
     path: 'strategies',
-    component: StrategyComponent
+    component: StrategyListComponent
   },
   {
     path: 'strategies/:edit_id',
