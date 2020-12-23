@@ -10,8 +10,8 @@ import {FormlyModule} from '@ngx-formly/core';
 import {FormlyNgZorroAntdModule} from '@ngx-formly/ng-zorro-antd';
 import {StrategyListComponent} from './strategies/strategy-list/strategy-list.component';
 import {EditStrategyComponent} from './strategies/edit-strategy/edit-strategy.component';
-import {HttpClientModule} from "@angular/common/http";
-import {StrategyComponent} from "./strategies/strategy/strategy.component";
+import {HttpClientModule} from '@angular/common/http';
+import {StrategyComponent} from './strategies/strategy/strategy.component';
 
 @NgModule({
   declarations: [

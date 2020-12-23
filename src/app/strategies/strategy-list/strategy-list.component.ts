@@ -7,22 +7,24 @@ import {StrategyService} from "../../_services/strategy.service";
   styleUrls: ['./strategy-list.component.css']
 })
 export class StrategyListComponent implements OnInit {
-  strategies = [
-    {
-      "id": 1,
-      "name": "strategy test",
-      "description": "desc strategy test",
-      "minimumBuySignals": 1,
-      "minimumSellSignals": 1
-    },
-    {
-      "id": 1,
-      "name": "strategy test",
-      "description": "desc strategy test",
-      "minimumBuySignals": 1,
-      "minimumSellSignals": 1
-    }
-  ];
+  // strategies = [
+  //   {
+  //     "id": 1,
+  //     "name": "strategy test",
+  //     "description": "desc strategy test",
+  //     "minimumBuySignals": 1,
+  //     "minimumSellSignals": 1
+  //   },
+  //   {
+  //     "id": 1,
+  //     "name": "strategy test",
+  //     "description": "desc strategy test",
+  //     "minimumBuySignals": 1,
+  //     "minimumSellSignals": 1
+  //   }
+  // ];
+
+  strategies = [];
 
   constructor(public service: StrategyService) { }
 
